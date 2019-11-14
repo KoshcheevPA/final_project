@@ -1,33 +1,58 @@
 import React from 'react';
+import '../App.css';
+import {NavLink} from "react-router-dom";
 
 function Main() {
     return (
-        <main>
-            <section>
-                <h1>Салон красоты «Медитация»</h1>
-                    <ul>
-                        <li>Стрижки</li>
-                        <li>Укладки</li>
-                        <li>Расслаблаяющая музыка</li>
-                        <li>Едниство с космосом</li>
-                    </ul>
-                <div>
-                    <h2>О салоне</h2>
-                    <p>«Медитация» - это уютный современный салон красоты в центре Санкт-Петербурга.</p>
-                    <p>Приятная и комфортная атмосфера.</p>
-                    <p>Достигайте союза вашей души и вашего тела, для этого у нас есть целый ряд процедур.</p>
-                    <p>Для гостей салона предусмотрены парковка, Wi-fi и вкусный индийский чай</p>
+        <main class='page-main'>
+            <section className='about'>
+                <h1 className='about__main-title'>Салон красоты «Медитация»</h1>
+                <ul className='about__features'>
+                    <li className='about__features-item about__features-item--barber'>
+                        <div className='about__features-container'>
+                            <p className='about__features-title'>Стрижки</p>
+                            <NavLink to='/recorder' className='about__button'>Записаться</NavLink>
+                        </div>
+                    </li>
+                    <li className='about__features-item about__features-item--hair'>
+                        <div className='about__features-container'>
+                            <p className='about__features-title'>Укладки</p>
+                            <NavLink to='/recorder' className='about__button'>Записаться</NavLink>
+                        </div>
+                    </li>
+                    <li className='about__features-item about__features-item--space'>
+                        <div className='about__features-container'>
+                            <p className='about__features-title'>Едниство с космосом</p>
+                            <NavLink to='/recorder' className='about__button'>Объединиться</NavLink>
+                        </div>
+                    </li>
+                    <li className='about__features-item about__features-item--soul'>
+                        <div className='about__features-container'>
+                            <p className='about__features-title'>Духовное просвещение</p>
+                            <NavLink to='/recorder' className='about__button'>Просветиться</NavLink>
+                        </div>
+                    </li>
+                </ul>
+                <h2 className='about__title'>О салоне</h2>
+                <div className='about__description'>
+                    <div className='about__description-container'>
+                        <span className='about__description-name'>«Медитация»</span>
+                        <p className='about__description-text'>Это уютный современный салон красоты в центре Санкт-Петербурга</p>
+                        <p className='about__description-text'>Приятная и комфортная атмосфера</p>
+                        <p className='about__description-text'>Достигайте союза вашей души и вашего тела</p>
+                        <p className='about__description-text'>Для гостей салона предусмотрены парковка, Wi-fi и вкусный индийский чай</p>
+                    </div>
                 </div>
-                <div>
-                    <h2>Отзывы наших клиентов</h2>
-                    <ul>
-                        <li>
-                            <p>Валерия</p>
-                            <p>Салон супер</p>
+                <div className='about__feedback'>
+                    <h2 className='about__title'>Отзывы наших клиентов</h2>
+                    <ul className='about__feedback-list'>
+                        <li className='about__feedback-item'>
+                            <p className='about__feedback-name'>Валерия</p>
+                            <p className='about__feedback-text'>Салон супер</p>
                         </li>
-                        <li>
-                            <p>Наталья</p>
-                            <p>Салон не супер</p>
+                        <li className='about__feedback-item'>
+                            <p className='about__feedback-name'>не Валерия</p>
+                            <p className='about__feedback-text'>Салон не супер</p>
                         </li>
                     </ul>
                 </div>

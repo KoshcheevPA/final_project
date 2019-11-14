@@ -1,18 +1,19 @@
 import React from 'react';
+import '../App.css';
 import {NavLink} from "react-router-dom";
 
 
 function Navigation() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to='/main'>Главная</NavLink>
+        <nav className='page-header__navigation'>
+            <ul className='page-header__list'>
+                <li className='page-header__list-item'>
+                    <NavLink to='/main' className='page-header__link'>Главная</NavLink>
                 </li>
-                <li>
-                    <NavLink to='/recorder'>Список услуг</NavLink>
+                <li className='page-header__list-item'>
+                    <NavLink to='/recorder' className='page-header__link'>Список услуг</NavLink>
                 </li>
-                <li>Личный кабинет</li>
+                <li className='page-header__list-item'>Личный кабинет</li>
             </ul>
         </nav>
     );

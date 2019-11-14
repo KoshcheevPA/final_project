@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700&display=swap&subset=cyrillic');
+
 .App {
+  font-family: 'Roboto', san-serif;
   background-color: mintcream;
 }
 
@@ -19,4 +22,188 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+  align-items: center;
+  /*background-color: gray;*/
+  /*box-shadow: 0 0 15px cornflowerblue;*/
+}
+
+.page-header__navigation {
+  flex-grow: 1;
+}
+
+.page-header__list {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.page-header__list-item {
+  margin: 8px;
+  border-bottom: 2px solid black;
+}
+
+.page-header__link {
+  font-weight: 700;
+  color: darkred;
+  text-decoration: none;
+}
+
+
+
+.page-main {
+  /*padding: 20px;*/
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about__main-title,
+.about__title{
+  padding: 10px;
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  border-bottom: 2px solid #09d3ac;
+}
+
+.about__title {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.about__features {
+  display: flex;
+  min-width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.about__features-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 45%;
+  min-height: 200px;
+  font-size: 22px;
+  line-height: 26px;
+  justify-content: flex-end;
+  margin: 15px;
+  font-weight: 500;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  background-position: center;
+  background-size: cover;
+}
+
+.about__features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 50%;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.about__button {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-shrink: 1;
+  background-color: #09d3ac;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.about__button:hover {
+  color: rgba(0,0,0,0.7);
+  box-shadow: 0 0 10px #09d3ac;
+}
+
+.about__button:active {
+  box-shadow: 0 0 10px white;
+}
+
+.about__features-title {
+    font-size: 24px;
+}
+
+
+.about__features-item:nth-child(2n-1) {
+  background-color: rgba(9, 211, 172, 0.5);
+  justify-content: flex-start;
+}
+
+.about__features-item--barber {
+  background-image: url("img/street.jpg");
+}
+
+.about__features-item--hair {
+  background-image: url("img/barber.jpg");
+}
+
+.about__features-item--cosmetics {
+  background-image: url("img/instruments.jpg");
+}
+
+.about__features-item--space {
+  background-image: url("img/space.jpg");
+}
+
+.about__features-item--soul {
+  background-image: url("img/union.jpg");
+}
+
+
+
+
+.about__description {
+  /*text-align: right;*/
+  color: white;
+  background-color: black;
+  /*padding: 80px;*/
+  background-image: url("img/meditation.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.about__description-container {
+  width: 50%;
+  float: right;
+  padding: 90px 50px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.about__description-text {
+  font-weight: 300;
+}
+
+.about__description-name {
+  color: #09d3ac;
+  font-size: 34px;
+  font-weight: 700;
 }

@@ -11,10 +11,10 @@ function App() {
     <BrowserRouter>
         <div className="App">
           <Header/>
-            <div>
+            {/*<div>*/}
                 <Route path='/main' component={Main}/>
                 <Route path='/recorder' component={Recorder}/>
-            </div>
+            {/*</div>*/}
           <Footer/>
         </div>
     </BrowserRouter>
