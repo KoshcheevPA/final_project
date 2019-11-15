@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700&display=swap&subset=cyrillic');
 
+#root-light {
+  --main-color: mintcream;
+  --text-color: black;
+}
+
+.root-dark {
+  --main-color: black;
+  --text-color: mintcream;
+}
+
 .App {
   font-family: 'Roboto', san-serif;
-  background-color: mintcream;
+  background-color: var(--main-color);
 }
 
 .App-logo {
@@ -135,6 +145,7 @@ ul {
 
 .about__main-title,
 .about__title{
+  color: var(--text-color);
   padding: 10px;
   margin: 0;
   font-size: 28px;
@@ -181,7 +192,7 @@ ul {
   padding: 20px;
   width: 50%;
   color: white;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.5 );
 }
 
 .about__button {

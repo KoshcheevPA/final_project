@@ -6,7 +6,7 @@ import MainFeedback from "./MainFeedback";
 
 function Main() {
     return (
-        <main class='page-main'>
+        <main className='page-main'>
             <section className='about'>
                 <h1 className='about__main-title'>Салон красоты «Медитация»</h1>
                 <MainFeatures/>

@@ -11,10 +11,8 @@ function App() {
     <BrowserRouter>
         <div className="App">
           <Header/>
-            {/*<div>*/}
                 <Route path='/main' component={Main}/>
                 <Route path='/recorder' component={Recorder}/>
-            {/*</div>*/}
           <Footer/>
         </div>
     </BrowserRouter>
