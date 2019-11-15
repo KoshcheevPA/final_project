@@ -74,7 +74,8 @@ ul {
 
 
 .page-header__list-item {
-  margin: 0 30px;
+  white-space: nowrap;
+  margin: 0 3%;
 }
 
 .page-header__list-item:hover {
@@ -99,15 +100,12 @@ ul {
   color: black;
 }
 
-.page-header__theme-container {
-  padding: 10px;
-}
 
 .page-header__theme {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin: 0 5px;
+  margin: 0 10px;
   border-radius: 50%;
   background-color: black;
   border: 2px solid #09d3ac;
@@ -148,6 +146,7 @@ ul {
   color: var(--text-color);
   padding: 10px;
   margin: 0;
+  margin-top: 30px;
   font-size: 28px;
   line-height: 36px;
   border-bottom: 2px solid #09d3ac;
@@ -277,6 +276,50 @@ ul {
   font-size: 34px;
   font-weight: 700;
 }
+
+
+
+/*-----------------------------*/
+.about__feedback-list {
+  padding: 20px;
+  margin: 40px auto;
+}
+
+
+.about__feedback-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.about__person-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  padding: 40px;
+  border-right: 2px solid #09d3ac;
+}
+
+.about__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #09d3ac;
+}
+
+
+.about__feedback-text {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 40px;
+  margin: 0;
+  width: 80%;
+  flex-grow: 1;
+}
+
 
 /*-------------------------------*/
 

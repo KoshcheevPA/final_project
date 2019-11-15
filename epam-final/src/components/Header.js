@@ -37,9 +37,9 @@ function Header() {
                 </svg>
             </a>
             <Navigation />
-            <div className='page-header__theme-container'>
+            {/*<div className='page-header__theme-container'>*/}
                 <span className='page-header__theme' id='theme' onClick={onThemeClick}></span>
-            </div>
+            {/*</div>*/}
         </header>
     );
 }

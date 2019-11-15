@@ -12,6 +12,7 @@ function App() {
         <div className="App">
           <Header/>
                 <Route path='/main' component={Main}/>
+                <Route path='/#about' component={Main}/>
                 <Route path='/recorder' component={Recorder}/>
           <Footer/>
         </div>

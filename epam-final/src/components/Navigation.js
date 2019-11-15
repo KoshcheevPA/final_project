@@ -14,10 +14,10 @@ function Navigation() {
                     <NavLink to='/recorder' className='page-header__link'>Услуги</NavLink>
                 </li>
                 <li className='page-header__list-item'>
-                    <a href='#feedback' className='page-header__link'>Отзывы</a>
+                    <a href='main#feedback' className='page-header__link'>Отзывы</a>
                 </li>
                 <li className='page-header__list-item'>
-                    <a href='#about' className='page-header__link'>О салоне</a>
+                    <a href='main#about' className='page-header__link'>О салоне</a>
                 </li>
                 <li className='page-header__list-item page-header__list-item--personal'>
                     <svg className='page-header__personal-logo' width="37" height="37" x="0" y="0" viewBox="0 0 95 92" stroke='#09d3ac' strokeWidth='3'>

@@ -1,19 +1,22 @@
 import React from 'react';
 import '../App.css';
+import FeedbackItem from "./FeedbackItem";
 
 function MainFeedback() {
     return (
         <div className='about__feedback'>
             <h2 className='about__title'><a name='feedback'>Отзывы наших клиентов</a></h2>
             <ul className='about__feedback-list'>
-                <li className='about__feedback-item'>
-                    <p className='about__feedback-name'>Валерия</p>
-                    <p className='about__feedback-text'>Салон супер</p>
-                </li>
-                <li className='about__feedback-item'>
-                    <p className='about__feedback-name'>не Валерия</p>
-                    <p className='about__feedback-text'>Салон не супер</p>
-                </li>
+                <FeedbackItem  personName={'Сергей Кунжутович'}  avatarUrl={''}
+                               commentText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' +
+                               ' sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                               'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ' +
+                               'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
+                               'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
+                <FeedbackItem  personName={'отец Сергея Кунжутовича'}  avatarUrl={''}
+                               commentText={'Ваш салон просто ОТВАЛ БАШКИ'}/>
+                <FeedbackItem  personName={'дед Сергея Кунжутовича'}  avatarUrl={''}
+                               commentText={'Раньше лучше было'}/>
             </ul>
         </div>
     );
