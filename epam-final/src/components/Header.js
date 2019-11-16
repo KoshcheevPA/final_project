@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Navigation from "./Navigation";
+import {NavLink} from "react-router-dom";
 
 function Header() {
     function onThemeClick(e) {
@@ -17,7 +18,7 @@ function Header() {
     }
     return (
         <header className='page-header'>
-            <a className='page-header__logo-link' href='#'>
+            <NavLink to='/main' className='page-header__logo-link'>
                 <svg className='page-header__logo' width="75px" height="85px"
                       viewBox="0 0 8438.26 7777.75"
                       fill="#09d3ac">
@@ -35,7 +36,7 @@ function Header() {
                         </g>
                     </g>
                 </svg>
-            </a>
+            </NavLink>
             <Navigation />
             {/*<div className='page-header__theme-container'>*/}
                 <span className='page-header__theme' id='theme' onClick={onThemeClick}></span>

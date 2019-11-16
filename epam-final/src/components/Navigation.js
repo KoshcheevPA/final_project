@@ -1,24 +1,16 @@
 import React from 'react';
 import '../App.css';
 import {NavLink} from "react-router-dom";
-
+import NavigationItem from "./NavigationItem";
 
 function Navigation() {
     return (
         <nav className='page-header__navigation'>
             <ul className='page-header__list'>
-                <li className='page-header__list-item'>
-                    <NavLink to='/main' className='page-header__link'>Главная</NavLink>
-                </li>
-                <li className='page-header__list-item'>
-                    <NavLink to='/recorder' className='page-header__link'>Услуги</NavLink>
-                </li>
-                <li className='page-header__list-item'>
-                    <a href='main#feedback' className='page-header__link'>Отзывы</a>
-                </li>
-                <li className='page-header__list-item'>
-                    <a href='main#about' className='page-header__link'>О салоне</a>
-                </li>
+                <NavigationItem path={'/'} text={'Главная'} />
+                <NavigationItem path={'/recorder'} text={'Услуги'} />
+                <NavigationItem path={'#feedback'} text={'Отзывы'} />
+                <NavigationItem path={'#about'} text={'О салоне'} />
                 <li className='page-header__list-item page-header__list-item--personal'>
                     <svg className='page-header__personal-logo' width="37" height="37" x="0" y="0" viewBox="0 0 95 92" stroke='#09d3ac' strokeWidth='3'>
                         <g>

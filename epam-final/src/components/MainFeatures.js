@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import FeaturElement from "./FeaturElement";
 
 function MainFeatures() {

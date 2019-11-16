@@ -13,9 +13,9 @@ function MainFeedback() {
                                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ' +
                                'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ' +
                                'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}/>
-                <FeedbackItem  personName={'отец Сергея Кунжутовича'}  avatarUrl={''}
+                <FeedbackItem  personName={'отец Сергея Кунжутовича'}  avatarUrl={require('../img/union.jpg')}
                                commentText={'Ваш салон просто ОТВАЛ БАШКИ'}/>
-                <FeedbackItem  personName={'дед Сергея Кунжутовича'}  avatarUrl={''}
+                <FeedbackItem  personName={'дед Сергея Кунжутовича'}  avatarUrl={require('../img/barber.jpg')}
                                commentText={'Раньше лучше было'}/>
             </ul>
         </div>

@@ -1,13 +1,12 @@
 import React from 'react';
-import '../App.css';
-import {NavLink} from "react-router-dom";
+import LinkButton from "./LinkButton";
 
 function FeaturElement(props) {
     return (
         <li className={'about__features-item about__features-item--'+props.name}>
             <div className='about__features-container'>
                 <p className='about__features-title'>{props.text}</p>
-                <NavLink to={props.path} className='about__button'>{props.buttonText}</NavLink>
+                <LinkButton path={props.path} buttonText={props.buttonText} />
             </div>
         </li>
     );

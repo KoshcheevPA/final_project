@@ -4,19 +4,18 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import Recorder from "./Recorder";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
         <div className="App">
           <Header/>
-                <Route path='/main' component={Main}/>
-                <Route path='/#about' component={Main}/>
+          <Switch>
+                <Route exact path='/' component={Main}/>
                 <Route path='/recorder' component={Recorder}/>
+          </Switch>
           <Footer/>
         </div>
-    </BrowserRouter>
   );
 }
 
