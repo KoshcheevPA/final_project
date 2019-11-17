@@ -2,20 +2,9 @@ import React from 'react';
 import '../App.css';
 import Navigation from "./Navigation";
 import {NavLink} from "react-router-dom";
+import Theme from "./Theme";
 
 function Header() {
-    function onThemeClick(e) {
-        let element = document.getElementById('root').classList;
-        let themeButton = document.getElementById('theme').classList;
-        if(element.length === 1) {
-            element.add('root-dark');
-            themeButton.add('page-header__theme--light');
-        } else {
-            element.remove('root-dark');
-            themeButton.remove('page-header__theme--light');
-        }
-
-    }
     return (
         <header className='page-header'>
             <NavLink to='/main' className='page-header__logo-link'>
@@ -38,9 +27,7 @@ function Header() {
                 </svg>
             </NavLink>
             <Navigation />
-            {/*<div className='page-header__theme-container'>*/}
-                <span className='page-header__theme' id='theme' onClick={onThemeClick}></span>
-            {/*</div>*/}
+            <Theme/>
         </header>
     );
 }
