@@ -1,6 +1,4 @@
 import React from 'react';
-import '../App.css';
-import {NavLink} from "react-router-dom";
 import NavigationItem from "./NavigationItem";
 
 function Navigation() {

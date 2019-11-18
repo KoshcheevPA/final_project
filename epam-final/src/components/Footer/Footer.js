@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import FooterInfo from "./FooterInfo";
 import FooterSocialItem from "./FooterSocialItem";
 

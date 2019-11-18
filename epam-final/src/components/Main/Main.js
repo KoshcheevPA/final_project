@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import MainAbout from "./MainAbout";
 import MainFeatures from "./MainFeatures";
 import MainFeedback from "./MainFeedback";

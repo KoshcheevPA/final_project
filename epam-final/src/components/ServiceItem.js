@@ -1,19 +1,20 @@
 import React from 'react';
 import '../App.css';
-import Recorder from "./Recorder";
-import LinkButton from "./LinkButton";
-import LinkTitle from "./LinkTitle";
+import LinkButton from "./Utils/LinkButton";
+import LinkTitle from "./Utils/LinkTitle";
 
 function ServiceItem(props) {
+    const {service} = props;
     return (
-        <li className='service__item'>
-            <LinkTitle path={''} titleText={props.serviceName}/>
+        <div className='service__item-container'>
+            <LinkTitle path={service.path} titleText={service.serviceName}/>
             <div className='service__container'>
-                <p className='service__description'>{props.description}</p>
-                <span className='service__price'>от {props.price}₽</span>
-                <LinkButton path={props.path} buttonText={'Подробнее'} />
+                <p className='service__description'>{service.description}</p>
+                <span className='service__price'>от {service.price}₽</span>
+                <LinkButton path={service.path} buttonText={'Подробнее'} />
             </div>
-        </li>
+        </div>
+
     );
 }
 

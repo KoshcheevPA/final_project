@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkButton from "./LinkButton";
+import LinkButton from "../Utils/LinkButton";
 
 function FeaturElement(props) {
     return (

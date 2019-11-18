@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import Navigation from "./Navigation";
 import {NavLink} from "react-router-dom";
 import Theme from "./Theme";
@@ -7,7 +6,7 @@ import Theme from "./Theme";
 function Header() {
     return (
         <header className='page-header'>
-            <NavLink to='/main' className='page-header__logo-link'>
+            <NavLink to='/' className='page-header__logo-link'>
                 <svg className='page-header__logo' width="75px" height="85px"
                       viewBox="0 0 8438.26 7777.75"
                       fill="#09d3ac">
