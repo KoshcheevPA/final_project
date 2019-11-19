@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainAbout() {
+function MainAbout(props) {
     return (
         <div className='about__description'>
             <div className='about__description-container'>

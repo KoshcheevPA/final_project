@@ -3,9 +3,9 @@ import '../App.css';
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
-import Recorder from "./Recorder";
+import Recorder from "./Services/Recorder";
 import {Route, Switch} from "react-router-dom";
-import ServicesRoute from "./ServiceRoutes";
+import ServicesRoute from "./Services/ServiceRoutes";
 import ServiceData from "../ServiceData";
 
 function App() {

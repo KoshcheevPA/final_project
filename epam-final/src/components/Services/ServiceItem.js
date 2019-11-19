@@ -1,7 +1,6 @@
 import React from 'react';
-import '../App.css';
-import LinkButton from "./Utils/LinkButton";
-import LinkTitle from "./Utils/LinkTitle";
+import LinkButton from "../Utils/LinkButton";
+import LinkTitle from "../Utils/LinkTitle";
 
 function ServiceItem(props) {
     const {service} = props;
@@ -14,7 +13,6 @@ function ServiceItem(props) {
                 <LinkButton path={service.path} buttonText={'Подробнее'} />
             </div>
         </div>
-
     );
 }
 

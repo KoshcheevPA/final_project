@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import ServiceItem from "./ServiceItem";
 
 function ServicesList({services}) {
@@ -8,6 +7,7 @@ function ServicesList({services}) {
             <ServiceItem service={service}/>
         </li>
     );
+
 
     return (
         <ul className='service__list'>

@@ -1,11 +1,12 @@
 import React from 'react';
-import Main from "./Main/Main";
+import Main from "../Main/Main";
 
 import {Route} from "react-router-dom";
+import ServicesPages from "./ServicesPages";
 
 function ServicesRoute({services}) {
     const servicesElements = services.map(service =>
-        <Route exact path={service.path} component={Main} key={service.id + 'route'}/>
+        <Route exact path={service.path}  component={ServicesPages} key={service.id + 'route'}><ServicesPages services={service}/></Route>
     );
 
     return (
