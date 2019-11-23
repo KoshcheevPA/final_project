@@ -1,12 +1,13 @@
 import React from 'react';
 
 function ServiceSelect(props) {
+    let id = 1200;
     const optionItem = props.services.map(service =>
-        <option value={service.serviceName} selected={props.selectedItem === service.serviceName} >{service.serviceName}</option>
+        <option defaultValue={service.serviceName} selected={props.selectedItem === service.serviceName} key={id++}>{service.serviceName}</option>
     );
 
     return (
-        <select className='form__input'>
+        <select className='form__input' name={props.name} ref={props.refName} defaultValue={props.selectedItem}>
             {optionItem}
         </select>
     );

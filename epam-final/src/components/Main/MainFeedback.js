@@ -4,7 +4,7 @@ import FeedbackItem from "./FeedbackItem";
 function MainFeedback() {
     return (
         <div className='about__feedback'>
-            <h2 className='about__title'><a name='feedback'>Отзывы наших клиентов</a></h2>
+            <h2 className='about__title'>Отзывы наших клиентов</h2>
             <ul className='about__feedback-list'>
                 <FeedbackItem  personName={'Сергей Кунжутович'}  avatarUrl={''}
                                commentText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' +

@@ -33,5 +33,15 @@ export default [
         fullDescription: 'Тут текст про ногти, который я не придумал. Давайте сделаем вид, что он тут есть',
         price:'700',
         path:'/nails',
-        componentName: 'Nails'}
+        componentName: 'Nails'
+    },
+    {
+        id: 's5n1',
+        serviceName: 'Медитационный сеанс',
+        description: 'Сеанс медитация для красоты вашего духовного состояния',
+        fullDescription: 'Сеанс медитации, который ведет наш сертифицированый специалист медитатор высшего класса, первого сорта',
+        price:'200',
+        path:'/meditate',
+        componentName: 'Meditate'
+    }
     ]

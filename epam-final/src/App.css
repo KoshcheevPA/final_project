@@ -12,6 +12,7 @@
 
 body,
 html{
+  margin: 0;
   height: 100%;
 }
 
@@ -493,34 +494,55 @@ ul {
   width: 40%;
   margin: 20px auto;
   padding: 20px;
-   box-shadow: 0 0 5px #09d3ac;
+  box-shadow: 0 0 5px #09d3ac;
 }
 
 .form__list {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .form__item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__text {
-    font-weight: 700;
-    padding: 10px 0;
+  font-weight: 700;
+  padding: 10px 0;
+  color: var(--text-color);
 }
 
 .form__input {
-    /*width: 50%;*/
-    padding: 10px;
-    font-size: 14px;
-    line-height: 20px;
-    border: 1px solid #09d3ac;
-    margin: 5px 0;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #09d3ac;
+  margin: 5px 0;
 }
 
 .form__input:hover {
-    box-shadow: 0 0 4px #09d3ac;
+  box-shadow: 0 0 4px #09d3ac;
+}
+
+
+.loading-message {
+  font-size: 28px;
+  font-weight: 700;
+  color: #09d3ac;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button-container .button {
+  margin: 10px;
 }

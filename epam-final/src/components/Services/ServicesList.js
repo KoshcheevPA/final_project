@@ -8,7 +8,6 @@ function ServicesList({services}) {
         </li>
     );
 
-
     return (
         <ul className='service__list'>
             {servicesElements}

@@ -9,9 +9,7 @@ function Main() {
             <section className='about'>
                 <h1 className='about__main-title'>Салон красоты «Медитация»</h1>
                 <MainFeatures/>
-                <h2 className='about__title'>
-                    <a name='about'>О салоне</a>
-                </h2>
+                <h2 className='about__title'>О салоне</h2>
                 <MainAbout/>
                 <MainFeedback/>
             </section>

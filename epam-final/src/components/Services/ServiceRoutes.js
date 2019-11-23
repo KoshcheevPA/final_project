@@ -1,5 +1,4 @@
 import React from 'react';
-import Main from "../Main/Main";
 
 import {Route} from "react-router-dom";
 import ServicesPages from "./ServicesPages";
