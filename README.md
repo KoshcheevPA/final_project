@@ -8,10 +8,10 @@ npm start
 
 
 #Проект имеет следующую стркутуру
-
-  -actions 
-  -reducers
-  -store.js
+\n
+  -actions\n 
+  -reducers\n
+  -store.js\n
   (Redux файлы)
   -сomponents
     ...folders
