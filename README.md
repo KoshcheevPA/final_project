@@ -1,10 +1,10 @@
 # Koshcheev
 
 Для запуска проекта:
-Клонировать проект с github
-cd epam final
-npm install
-npm start
+-Клонировать проект с github
+-cd epam final
+-npm install
+-npm start
 
 
 #Проект имеет следующую стркутуру
