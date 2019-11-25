@@ -7,7 +7,7 @@ function Header() {
     return (
         <header className='page-header'>
             <NavLink to='/' className='page-header__logo-link'>
-                <svg className='page-header__logo' width="75px" height="85px"
+                <svg className='page-header__logo' width="65px" height="75px"
                       viewBox="0 0 8438.26 7777.75"
                       fill="#09d3ac">
                     <g id="Layer_x0020_1">

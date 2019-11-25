@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {OrdersConsumer} from "../OrdersContext";
 
 const withOrders = () => (Wrapped) => {
@@ -16,4 +16,4 @@ const withOrders = () => (Wrapped) => {
     }
 }
 
-export default withOrders;
+export default withOrders;*/

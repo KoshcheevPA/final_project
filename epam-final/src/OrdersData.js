@@ -1,16 +1,18 @@
-export default class OrdersData {
-    data = [
-        {
-            id: 'or1',
-            service: 'Hair',
-            time: '12:00'
-        },
-        {
-            id: 'or2',
-            service: 'Meditation',
-            time: '14:00'
-        }
-    ];
+/*export default class OrdersData {
+    id = 199;
+
+    data = [];
+
+    addOrder(newOrder) {
+        this.data = [...this.data, newOrder]
+    }
+
+    deleteOrder(orderId) {
+        const item = this.data.findIndex(({id}) => id === orderId);
+        console.log(item);
+        console.log(this.data.slice(0, item));
+        this.data = [...this.data.slice(0, item), ...this.data.slice(item, this.data.length - 1)];
+    }
 
     getOrders() {
         return new Promise((resolve) => {
@@ -19,4 +21,4 @@ export default class OrdersData {
             }, 700)
         });
     }
-}
+}*/

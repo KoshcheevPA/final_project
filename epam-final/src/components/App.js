@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../App.css';
 import Header from "./Header/Header";
 import Main from "./Main/Main";
@@ -11,23 +11,55 @@ import ServiceForm from "./Services/ServiceForm";
 import Orders from "./Orders/Orders";
 import LoginForm from "./Login/LoginForm";
 import Registration from "./Registration/Registration";
+import PrivateOffice from "./PrivateOffice/PrivateOffice";
+import {userLogIn, userLogOff} from "../actions/actions";
+import {connect} from "react-redux";
 
-function App() {
-  return (
-        <div className="App">
-          <Header/>
-          {/*<Switch>*/}
+class App extends Component {
+  
+    onLogin = () => {
+        this.props.userLogIn();
+    };
+
+    onLogOff = () => {
+        
+        this.props.userLogOff();
+    };
+
+    render() {
+        const {isLoggedIn} = this.props;
+        return (
+            <div className="App">
+                <Header/>
+                {/*<Switch>*/}
                 <Route exact path='/' component={Main}/>
                 <Route path='/recorder' component={Recorder}/>
                 <Route path='/record' component={ServiceForm}/>
                 <Route path='/orders' component={Orders}/>
-                <Route path='/login' component={LoginForm}/>
+                <Route path='/login' render={() => <LoginForm isLoggedIn={isLoggedIn} onLogin={this.onLogin}/>}/>
+                <Route path='/private' render={() => <PrivateOffice isLoggedIn={isLoggedIn}
+                                                                    onLogOff={this.onLogOff}/>}/>
                 <Route path='/registration' component={Registration}/>
                 <ServicesRoute services={ServiceData}/>
-          {/*</Switch>*/}
-          <Footer/>
-        </div>
-  );
+                {/*</Switch>*/}
+                <Footer/>
+            </div>
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = ({isLoggedIn, infoEdit}) => {
+    return {
+        isLoggedIn,
+        infoEdit
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        userLogIn: userLogIn(dispatch),
+        userLogOff: userLogOff(dispatch)
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

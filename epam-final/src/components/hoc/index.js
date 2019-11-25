@@ -1,2 +1,2 @@
-import withOrders from "./withOrders";
-export {withOrders}
+/*import withOrders from "./withOrders";
+export {withOrders}*/

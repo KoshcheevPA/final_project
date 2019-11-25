@@ -2,7 +2,7 @@ import React from 'react';
 
 function LoadingMessage(props) {
     return (
-        <div className='loading-message'>
+        <div className='message'>
             <p>Loading...</p>
         </div>
     );

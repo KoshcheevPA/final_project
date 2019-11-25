@@ -1,22 +1,34 @@
-const ordersLoaded = (newOrders) => {
+const logIn = () => {
     return {
-        type: 'FETCH_ORDERS_LOAD',
-        payload: newOrders
+        type: 'USER_LOG_IN'
     }
 };
 
-const ordersRequested = () => {
+const logOff = () => {
     return {
-        type: 'FETCH_ORDERS_REQUEST'
+        type: 'USER_LOG_OFF'
     }
 };
 
-const fetchOrders = (ordersData, dispatch) => () => {
-    dispatch(ordersRequested());
-    ordersData.getOrders().then((data) =>
-        dispatch(ordersLoaded(data)));
+const userLogOff = (dispatch) => () => {
+    dispatch(logOff());
 };
+
+const userLogIn = (dispatch) => () => {
+    dispatch(logIn());
+};
+
+export const addOrder = (newOrder) => ({
+    type: 'ADD_ORDER',
+    newOrder
+});
+
+export const deleteOrder = (orderId) => ({
+    type: 'DELETE_ORDER',
+    orderId
+});
 
 export  {
-    fetchOrders
+    userLogIn,
+    userLogOff
 };

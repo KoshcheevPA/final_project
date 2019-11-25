@@ -1,25 +1,26 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import OrderListItem from './OrdersListItem';
-import {withOrders} from '../hoc';
-import {fetchOrders} from '../../actions/actions';
+import { deleteOrder } from '../../actions/actions.js'
 import LoadingMessage from "../Utils/LoadingMessage";
 
 class OrdersList extends Component {
-    componentDidMount() {
-        this.props.fetchOrders();
-    }
-
+  
     render() {
-        const {orders, loading} = this.props;
-        if(loading) {
-            return <LoadingMessage/>;
+        const {orders, isLoggedIn} = this.props;
+        
+        if(orders.length === 0) {
+            return  (
+                <div className='order'>
+                    <p className='order__text'>На данный момент вы не записались ни на одну услугу</p>
+                </div>
+            );
         }
         return (
             <ul className='service__list'>
                 {orders.map(order =>
                     <li className='service__item' key={order.id}>
-                        <OrderListItem order={order}/>
+                        <OrderListItem order={order} onDelete={this.props.deleteOrder} isLoggedIn={isLoggedIn}/>
                     </li>
                 )}
             </ul>
@@ -27,17 +28,12 @@ class OrdersList extends Component {
     }
 }
 
-const mapStateToProps = ({orders, loading}) => {
+const mapStateToProps = ({orders, loading, isLoggedIn}) => {
     return {
         orders,
-        loading
+        loading,
+        isLoggedIn
     };
 };
 
-const mapDispatchToProps =  (dispatch, {ordersData}) => {
-    return {
-        fetchOrders: fetchOrders(ordersData, dispatch)
-    }
-};
-
-export default withOrders()(connect(mapStateToProps, mapDispatchToProps)(OrdersList));
+export default connect(mapStateToProps, { deleteOrder })(OrdersList);
