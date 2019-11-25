@@ -8,7 +8,6 @@ function LoginForm({isLoggedIn, onLogin}) {
         return <Redirect to='/private' />
     }
 
-
     return (
         <form className='form' onSubmit={onLogin}>
             <ul className='form__list'>

@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from "../Utils/Button";
-import LinkButton from "../Utils/LinkButton";
+import Button from '../Utils/Button';
+import LinkButton from '../Utils/LinkButton';
 
 function Registration() {
     return (

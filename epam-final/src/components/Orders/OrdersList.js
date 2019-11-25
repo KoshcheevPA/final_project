@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import OrderListItem from './OrdersListItem';
 import { deleteOrder } from '../../actions/actions.js'
-import LoadingMessage from "../Utils/LoadingMessage";
 
 class OrdersList extends Component {
   

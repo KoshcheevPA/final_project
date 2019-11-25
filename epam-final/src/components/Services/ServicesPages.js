@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Button from "../Utils/Button";
-import ServiceForm from "./ServiceForm";
+import Button from '../Utils/Button';
+import ServiceForm from './ServiceForm';
 
 class ServicesPages extends Component {
     state = {
@@ -21,7 +21,7 @@ class ServicesPages extends Component {
                     <h1 className='service__title service-page__title'>{this.props.services.serviceName}</h1>
                     <p className='service-page__description'>{this.props.services.fullDescription}</p>
                 </div>
-                <span className='service__price'>{this.props.services.price}₽</span>
+                <span className='service__info'>{this.props.services.price}₽</span>
                 <Button type={'button'} onClick={this.buttonHandler} buttonText={this.state.formOpen ? 'Отмена' : 'Записаться'}/>
                 {form}
             </section>

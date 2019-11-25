@@ -1,6 +1,6 @@
 import React from 'react';
-import ServicesList from "./ServicesList";
-import ServiceData from "../../ServiceData";
+import ServicesList from './ServicesList';
+import ServiceData from '../../ServiceData';
 
 function Recorder() {
     return (

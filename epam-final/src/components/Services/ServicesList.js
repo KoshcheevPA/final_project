@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceItem from "./ServiceItem";
+import ServiceItem from './ServiceItem';
 
 function ServicesList({services}) {
     const servicesElements = services.map(service =>

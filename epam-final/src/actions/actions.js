@@ -36,3 +36,7 @@ export const saveUserInfo = (info) => ({
     type: 'SAVE_USER_INFO',
     info
 });
+
+export const cancelEdit = () => ({
+    type: 'CANCEL_EDIT'
+});

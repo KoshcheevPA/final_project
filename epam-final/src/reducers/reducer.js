@@ -2,7 +2,7 @@ const initialState = {
     orders: [],
     isLoggedIn: false,
     infoEdit: false,
-    userName: 'Александр Керенский',
+    userName: 'Керенский',
     userEmail: 'kerenskyi@gov.ru'
 };
 
@@ -16,7 +16,8 @@ const reducer = (state = initialState, action) => {
         case 'USER_LOG_OFF':
             return {
                 ...state,
-                isLoggedIn: false
+                isLoggedIn: false,
+                infoEdit: false
             };
         case 'ADD_ORDER':
             return {
@@ -41,6 +42,11 @@ const reducer = (state = initialState, action) => {
                 infoEdit: false,
                 userName: action.info.userName,
                 userEmail: action.info.userEmail
+            };
+        case 'CANCEL_EDIT':
+            return {
+                ...state,
+                infoEdit: false
             };
         default:
             return state;

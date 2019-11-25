@@ -1,5 +1,5 @@
 import React from 'react';
-import OrdersList from "./OrdersList";
+import OrdersList from './OrdersList';
 
 function Orders() {
     return (

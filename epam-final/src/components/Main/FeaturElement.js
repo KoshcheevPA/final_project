@@ -1,7 +1,7 @@
 import React from 'react';
-import LinkButton from "../Utils/LinkButton";
+import LinkButton from '../Utils/LinkButton';
 
-function FeaturElement(props) {
+function FeatureElement(props) {
     return (
         <li className={'about__features-item about__features-item--'+props.name}>
             <div className='about__features-container'>
@@ -12,4 +12,4 @@ function FeaturElement(props) {
     );
 }
 
-export default FeaturElement;
+export default FeatureElement;

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Button from "../Utils/Button";
-import ServiceData from "../../ServiceData";
-import ServiceSelect from "./ServicesSelect";
-import {connect} from "react-redux";
-import SubmitSuccess from "../Utils/SubmitSuccess";
+import Button from '../Utils/Button';
+import ServiceData from '../../ServiceData';
+import ServiceSelect from './ServicesSelect';
+import {connect} from 'react-redux';
+import SubmitSuccess from '../Utils/SubmitSuccess';
 import { addOrder } from '../../actions/actions.js'
 
 class ServiceForm extends Component {
@@ -49,11 +49,11 @@ class ServiceForm extends Component {
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='nameInput'>Ваше имя:</label>
-                        <input className='form__input' ref={this.name} type='text' maxLength='20' minLength='3' placeholder='Ваше имя' id='nameInput' required/>
+                        <input className='form__input' ref={this.name} defaultValue={this.props.isLoggedIn ? this.props.userName : ''} type='text' maxLength='20' minLength='3' placeholder='Ваше имя' id='nameInput' required/>
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='emailInput'>Ваш email:</label>
-                        <input className='form__input' ref={this.email} type='email' placeholder='Ваш email' id='emailInput' required/>
+                        <input className='form__input' ref={this.email} defaultValue={this.props.isLoggedIn ? this.props.userEmail : ''} type='email' placeholder='Ваш email' id='emailInput' required/>
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='dateInput'>Дата:</label>
@@ -61,7 +61,7 @@ class ServiceForm extends Component {
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='timeInput'>Время:</label>
-                        <input className='form__input' type='time' ref={this.time} defaultValue="09:00" min="09:00" max="22:00" placeholder='Желаемая дата' id='timeInput' required/>
+                        <input className='form__input' type='time' ref={this.time} defaultValue='09:00' min='09:00' max='22:00' placeholder='Желаемая дата' id='timeInput' required/>
                     </li>
                 </ul>
                 <Button type={'submit'} buttonText={'Отправить'}/>
@@ -70,9 +70,12 @@ class ServiceForm extends Component {
     }
 }
 
-const mapStateToProps = ({orders}) => {
+const mapStateToProps = ({orders, isLoggedIn, userName, userEmail}) => {
     return {
-        orders
+        orders,
+        isLoggedIn,
+        userName,
+        userEmail
     };
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Route} from "react-router-dom";
-import ServicesPages from "./ServicesPages";
+import {Route} from 'react-router-dom';
+import ServicesPages from './ServicesPages';
 
 function ServicesRoute({services}) {
     const servicesElements = services.map(service =>

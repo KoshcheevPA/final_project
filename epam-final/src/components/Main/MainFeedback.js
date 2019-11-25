@@ -1,5 +1,5 @@
 import React from 'react';
-import FeedbackItem from "./FeedbackItem";
+import FeedbackItem from './FeedbackItem';
 
 function MainFeedback() {
     return (

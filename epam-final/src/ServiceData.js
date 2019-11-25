@@ -43,5 +43,14 @@ export default [
         price:'200',
         path:'/meditate',
         componentName: 'Meditate'
+    },
+    {
+        id: 's6n1',
+        serviceName: 'Единение с космосом',
+        description: 'Сеанс единения с космосом для получения сил стихий воды, воздуха, земли и огня',
+        fullDescription: 'Стихии воды, воздуха, земли и огня вещь необычная, придётся постараться и вам',
+        price:'1000',
+        path:'/space',
+        componentName: 'space'
     }
     ]

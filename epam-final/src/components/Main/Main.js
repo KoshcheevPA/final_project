@@ -1,7 +1,7 @@
 import React from 'react';
-import MainAbout from "./MainAbout";
-import MainFeatures from "./MainFeatures";
-import MainFeedback from "./MainFeedback";
+import MainAbout from './MainAbout';
+import MainFeatures from './MainFeatures';
+import MainFeedback from './MainFeedback';
 
 function Main() {
     return (

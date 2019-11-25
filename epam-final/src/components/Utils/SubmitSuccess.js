@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkButton from "./LinkButton";
+import LinkButton from './LinkButton';
 import { Redirect } from 'react-router-dom'
 
 function SubmitSuccess(props) {

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom';
-import Button from "../Utils/Button";
-import Orders from "../Orders/Orders";
-import UserInfoEdit from "./UserInfoEdit";
-import {connect} from "react-redux";
-import {userInfoEdit, saveUserInfo} from "../../actions/actions";
+import Button from '../Utils/Button';
+import Orders from '../Orders/Orders';
+import UserInfoEdit from './UserInfoEdit';
+import {connect} from 'react-redux';
+import {userInfoEdit, saveUserInfo, cancelEdit} from '../../actions/actions';
 
 class PrivateOffice extends Component {
     render() {
@@ -16,7 +16,11 @@ class PrivateOffice extends Component {
                         <Button type={'button'} buttonText={'Выйти'} onClick={this.props.onLogOff}/>
                     </div>
                     {this.props.infoEdit ?
-                        <UserInfoEdit userName={this.props.userName} userEmail={this.props.userEmail} saveUserInfo={this.props.saveUserInfo}/> :
+                        <UserInfoEdit userName={this.props.userName}
+                                      userEmail={this.props.userEmail}
+                                      saveUserInfo={this.props.saveUserInfo}
+                                      cancelEdit={this.props.cancelEdit}/>
+                                      :
                         <div className='office__user-info'>
                             <p className='office__text'>Имя: <span className='office__info'>{this.props.userName}</span></p>
                             <p className='office__text'>Email: <span className='office__info'>{this.props.userEmail}</span></p>
@@ -41,6 +45,4 @@ const mapStateToProps = ({infoEdit, userName, userEmail}) => {
     };
 };
 
-export default connect(mapStateToProps, { userInfoEdit, saveUserInfo })(PrivateOffice);
-
-// export default PrivateOffice;
+export default connect(mapStateToProps, { userInfoEdit, saveUserInfo, cancelEdit })(PrivateOffice);

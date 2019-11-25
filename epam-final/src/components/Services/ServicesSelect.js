@@ -3,7 +3,7 @@ import React from 'react';
 function ServiceSelect(props) {
     let id = 1200;
     const optionItem = props.services.map(service =>
-        <option defaultValue={service.serviceName} key={id++}>{service.serviceName}</option>
+        <option defaultValue={service.serviceName} key={id++}>{service.serviceName} {service.price}₽</option>
     );
 
     return (

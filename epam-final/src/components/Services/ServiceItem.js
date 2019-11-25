@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkButton from "../Utils/LinkButton";
-import LinkTitle from "../Utils/LinkTitle";
+import LinkButton from '../Utils/LinkButton';
+import LinkTitle from '../Utils/LinkTitle';
 
 function ServiceItem(props) {
     const {service} = props;
@@ -9,7 +9,7 @@ function ServiceItem(props) {
             <LinkTitle path={service.path} titleText={service.serviceName}/>
             <div className='service__container'>
                 <p className='service__description'>{service.description}</p>
-                <span className='service__price'>от {service.price}₽</span>
+                <span className='service__info'>от {service.price}₽</span>
                 <LinkButton path={service.path} buttonText={'Подробнее'} />
             </div>
         </div>

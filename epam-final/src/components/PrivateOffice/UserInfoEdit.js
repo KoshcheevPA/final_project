@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import Button from "../Utils/Button";
-import Orders from "../Orders/Orders";
-import {saveUserInfo} from "../../actions/actions";
+import Button from '../Utils/Button';
 
 class UserInfoEdit extends Component {
     state = {
@@ -31,16 +29,19 @@ class UserInfoEdit extends Component {
     render() {
         return (
                 <ul className='office__user-info'>
-                    <li>
+                    <li className='form__item'>
                         <p className='office__text'>Имя: <span className='office__info'>{this.state.nameLabel}</span></p>
-                        <input className='form__input' defaultValue={this.props.userName} type='text' onChange={this.onLabelNameChange}/>
+                        <input className='form__input' defaultValue={this.props.userName}  maxLength='15' type='text' onChange={this.onLabelNameChange}/>
                     </li>
-                    <li>
+                    <li className='form__item'>
                         <p className='office__text'>Email: <span className='office__info'>{this.state.emailLabel}</span></p>
                         <input className='form__input' defaultValue={this.props.userEmail} type='text' onChange={this.onLabelEmailChange}/>
                     </li>
-                    <li>
-                        <Button type={'button'} buttonText={'Сохранить'} onClick={this.onHandleSave}/>
+                    <li className='form__item'>
+                        <div className='form__button-container'>
+                            <Button type={'button'} buttonText={'Сохранить'} onClick={this.onHandleSave}/>
+                            <Button type={'button'} buttonText={'Отмена'} onClick={this.props.cancelEdit}/>
+                        </div>
                     </li>
                 </ul>
         );
