@@ -4,7 +4,6 @@ import ServiceData from "../../ServiceData";
 import ServiceSelect from "./ServicesSelect";
 import {connect} from "react-redux";
 import SubmitSuccess from "../Utils/SubmitSuccess";
-import Orders from "../Orders/Orders";
 import { addOrder } from '../../actions/actions.js'
 
 class ServiceForm extends Component {
@@ -17,8 +16,6 @@ class ServiceForm extends Component {
         this.time = React.createRef();
         this.state = { submit: false };
     }
-
-   
 
     onSubmit = (e) => {
         this.props.addOrder({
@@ -44,7 +41,6 @@ class ServiceForm extends Component {
         }
 
         return (
-            <div>
             <form className='form' onSubmit={this.onSubmit}>
                 <ul className='form__list'>
                     <li className='form__item'>
@@ -53,7 +49,7 @@ class ServiceForm extends Component {
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='nameInput'>Ваше имя:</label>
-                        <input className='form__input' ref={this.name} type='text' placeholder='Ваше имя' id='nameInput' required/>
+                        <input className='form__input' ref={this.name} type='text' maxLength='20' minLength='3' placeholder='Ваше имя' id='nameInput' required/>
                     </li>
                     <li className='form__item'>
                         <label className='form__text' htmlFor='emailInput'>Ваш email:</label>
@@ -70,8 +66,6 @@ class ServiceForm extends Component {
                 </ul>
                 <Button type={'submit'} buttonText={'Отправить'}/>
             </form>
-                <Orders/>
-            </div>
         );
     }
 }

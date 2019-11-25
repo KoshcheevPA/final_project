@@ -1,11 +1,12 @@
 const initialState = {
     orders: [],
     isLoggedIn: false,
-    infoEdit: false
+    infoEdit: false,
+    userName: 'Александр Керенский',
+    userEmail: 'kerenskyi@gov.ru'
 };
 
 const reducer = (state = initialState, action) => {
-    console.log(action.type);
     switch (action.type) {
         case 'USER_LOG_IN':
             return {
@@ -28,6 +29,18 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 orders: state.orders.slice(0, orderIndex).concat(state.orders.slice(orderIndex + 1))
+            };
+        case 'USER_INFO_EDIT':
+            return {
+                ...state,
+                infoEdit: true
+            };
+        case 'SAVE_USER_INFO':
+            return {
+                ...state,
+                infoEdit: false,
+                userName: action.info.userName,
+                userEmail: action.info.userEmail
             };
         default:
             return state;

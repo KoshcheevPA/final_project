@@ -8,15 +8,15 @@ function Registration() {
             <ul className='form__list'>
                 <li className='form__item'>
                     <label className='form__text' htmlFor='userRegName'>Ваше имя:</label>
-                    <input className='form__input' type='text' id='userRegName'/>
+                    <input className='form__input' type='text' id='userRegName' required minLength='3' maxLength='20'/>
                 </li>
                 <li className='form__item'>
                     <label className='form__text' htmlFor='regEmail'>Email:</label>
-                    <input className='form__input' type='email' id='regEmail' />
+                    <input className='form__input' type='email' id='regEmail' required/>
                 </li>
                 <li className='form__item'>
                     <label className='form__text' htmlFor='pass'>Пароль:</label>
-                    <input className='form__input' type='password' id='pass' />
+                    <input className='form__input' type='password' id='pass' required/>
                 </li>
             </ul>
             <div className='form__button-container'>

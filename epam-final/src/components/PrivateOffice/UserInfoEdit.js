@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import Button from "../Utils/Button";
 import Orders from "../Orders/Orders";
+import {saveUserInfo} from "../../actions/actions";
 
 class UserInfoEdit extends Component {
     state = {
-        nameLabel : '',
-        emailLabel: ''
+        nameLabel : this.props.userName,
+        emailLabel: this.props.userEmail
     };
 
     onLabelNameChange = (e) => {
@@ -20,25 +21,28 @@ class UserInfoEdit extends Component {
         })
     };
 
+    onHandleSave = (e) => {
+        this.props.saveUserInfo({
+            userName: this.state.nameLabel,
+            userEmail: this.state.emailLabel
+        });
+    };
+
     render() {
         return (
-            <div className='office'>
-                <div className='office__header'>
-                    <h2 className='office__title'>Личный кабинет</h2>
-                    <Button type={'button'} buttonText={'Выйти'} onClick={this.props.onLogOff}/>
-                </div>
-                <div className='office__user-info'>
-                    <p className='office__text'>Имя: <span className='office__info'>{this.state.nameLabel}</span></p>
-                    <input type='text' onChange={this.onLabelNameChange}/>
-                    <p className='office__text'>Email: <span className='office__info'>{this.state.emailLabel}</span></p>
-                    <input type='text' onChange={this.onLabelEmailChange}/>
-                    <Button type={'button'} buttonText={'Сохранить'} onClick={this.props.userInfoEditSave}/>
-                </div>
-                <div className='office__header'>
-                    <h2 className='office__title'>Ваши записи</h2>
-                </div>
-                <Orders/>
-            </div>
+                <ul className='office__user-info'>
+                    <li>
+                        <p className='office__text'>Имя: <span className='office__info'>{this.state.nameLabel}</span></p>
+                        <input className='form__input' defaultValue={this.props.userName} type='text' onChange={this.onLabelNameChange}/>
+                    </li>
+                    <li>
+                        <p className='office__text'>Email: <span className='office__info'>{this.state.emailLabel}</span></p>
+                        <input className='form__input' defaultValue={this.props.userEmail} type='text' onChange={this.onLabelEmailChange}/>
+                    </li>
+                    <li>
+                        <Button type={'button'} buttonText={'Сохранить'} onClick={this.onHandleSave}/>
+                    </li>
+                </ul>
         );
     }
 }

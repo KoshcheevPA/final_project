@@ -1,4 +1,4 @@
-const logIn = () => {
+const logIn = (email) => {
     return {
         type: 'USER_LOG_IN'
     }
@@ -10,11 +10,11 @@ const logOff = () => {
     }
 };
 
-const userLogOff = (dispatch) => () => {
+export const userLogOff = (dispatch) => () => {
     dispatch(logOff());
 };
 
-const userLogIn = (dispatch) => () => {
+export const userLogIn = (dispatch) => () => {
     dispatch(logIn());
 };
 
@@ -28,7 +28,11 @@ export const deleteOrder = (orderId) => ({
     orderId
 });
 
-export  {
-    userLogIn,
-    userLogOff
-};
+export const userInfoEdit = () => ({
+    type: 'USER_INFO_EDIT'
+});
+
+export const saveUserInfo = (info) => ({
+    type: 'SAVE_USER_INFO',
+    info
+});
