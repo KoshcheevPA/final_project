@@ -1,6 +1,9 @@
 # Koshcheev
 
+Для просмотра деплоя github pages https://koshcheevpa.github.io/final_project/
+
 Для запуска проекта:
+
 - Клонировать проект с github
 - cd epam-final
 - npm install
